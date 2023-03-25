@@ -1,4 +1,5 @@
-import Expenseitem from "./components/Expenceitem";
+import Expenseitem from "./components/Expense/Expenceitem";
+import Card from "./components/UIs/Card";
 // import Movies from "./components/Movies";
 // import Food from "./components/Food"
 // import Petrol from "./components/Petrol"
@@ -10,19 +11,28 @@ function App() {
       date: new Date(),
       title: "Car Insurance",
       price: 1000,
-      placeexpendeture: "LIC",
+      placeexpendeture: "Insurance policy",
     },
     {
       id: 2,
       date: new Date(),
-      title: "Term Inuracne",
+      title: "Movies",
       price: 3000,
-      placeexpendeture: "LIC",
+      placeexpendeture: "Life style",
+    }, 
+    {
+      id: 23,
+      date: new Date(),
+      title: "Study",
+      price: 3000,
+      placeexpendeture: "Life style",
     },
   ];
 
   return (
-    <div className="App">
+    <div>
+    <h1>React 1st</h1>
+    <Card className="App">
 
 {expenses.map((expense) => (
         <Expenseitem
@@ -32,7 +42,9 @@ function App() {
           placeexpendeture={expense.placeexpendeture}
         />
       ))}
+      
      
+    </Card>
     </div>
   );
 }
