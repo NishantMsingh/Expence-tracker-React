@@ -5,18 +5,23 @@
     flex-direction: row;
     gap: 5px;
     border-radius: 10px;
-    border-radius: 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.914); 
     margin: 5px;
     padding: 5px 10px;
+}
+.btn{
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
 }
 .price{
 background-color: aqua !important;
 padding: 10px 30px;
 display: inline-block;
 border-radius: 10px;
-font-size: 20px !important;
+font-size: 16px !important;
 color: black;
 }
 .mar{
