@@ -9,7 +9,7 @@ return(
     <h1>{expensetitle}</h1>
 
 <div className="fla price">
-<h6>₹{expenseamount}</h6>
+<h6>{expenseamount}</h6>
 </div>
   </div>
 );

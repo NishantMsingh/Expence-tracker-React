@@ -1,19 +1,22 @@
+
 import "./Expense.css";
 import Expensedate from "./Expensedate";
 import ExpenseDetails from "./ExpenseDetails";
+import React,{useState} from "react";
 const Expenseitem=(props)=>{ 
 
-    // function clickhandler()
-    // {}
-    const clickhandler=()=>{
-        console.log("Har Har Mahadev");
-    }
+  const [price,setPrice]=useState(props.price);
+
+  function clickhandler(){
+    setPrice("$100");
+    console.log("Clicked");
+  }
     return (
         <div className="bgs">
             <div className="Expense-item">
         <Expensedate date={props.date}></Expensedate>
-        <ExpenseDetails price={props.price} title={props.title}></ExpenseDetails>
-        <button className="btn" onClick={()=>clickhandler}>Click title</button>
+        <ExpenseDetails price={price} title={props.title}></ExpenseDetails>
+        <button className="btn" onClick={clickhandler}>Click title</button>
         </div>
         </div>
     );
