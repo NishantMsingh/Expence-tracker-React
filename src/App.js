@@ -1,8 +1,7 @@
 import Expenseitem from "./components/Expense/Expenceitem";
 import Card from "./components/UIs/Card";
-// import Movies from "./components/Movies";
-// import Food from "./components/Food"
-// import Petrol from "./components/Petrol"
+import Newexpense from "./components/NewExpense/Newexpense";
+
 import "./App.css";
 function App() {
   let expenses = [
@@ -21,17 +20,25 @@ function App() {
       placeexpendeture: "Life style",
     }, 
     {
-      id: 23,
+      id: 3,
       date: new Date(),
       title: "Study",
       price: 3000,
-      placeexpendeture: "Life style",
+      placeexpendeture: "Life style"
     },
+    {
+      id: 23,
+      date: new Date(),
+      title: "Drive",
+      price: 2000,
+      placeexpendeture: "My style"
+    }
   ];
 
   return (
     <div>
-    <h1>React 1st</h1>
+    <h1>Expense Tracker</h1>
+    <Newexpense/>
     <Card className="App">
 
 {expenses.map((expense) => (

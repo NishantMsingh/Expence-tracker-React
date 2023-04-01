@@ -1,57 +1,58 @@
 .Expense-item{
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 5px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.914); 
-    margin: 5px;
-    padding: 5px 10px;
+    background-color: rgba(4, 28, 77, 0.672);
+    color:wheat;
+   margin: 15px 0px;
+   border-radius: 5px;
+   padding: 5px 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
-.btn{
-    border-radius: 10px;
-    padding: 15px 10px;
-    text-align: center;
-    border: none;
-}
-.price{
-background-color: aqua !important;
-padding: 10px 30px;
-display: inline-block;
-border-radius: 10px;
-font-size: 16px !important;
-color: black;
-}
-.mar{
+.expitem{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 1px solid white;
-    box-shadow: inset 3px 3px 5px 5px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-
-}
-
-.fla{
-    display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     gap: 0px 20px;
 }
-.month{
-    font-size: 20px;
+.btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.btn:focus{
+    background-color: rgba(246, 191, 236, 0.021);
+}
+.year{
+    font-size: 18px;
+    font-weight: bold;
 }
 .day{
-    font-size: 16px;
+    font-size: 14px;
 }
-.year
-{
-font-size: 30px;
+.month{
+ font-size: 14px;
+}
+.date{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(243, 250, 247);
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.expitem{
+    min-width: 400px;
+}
+.price{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(238, 237, 237);
+    color: black;
+    padding: 10px 15px;
 }

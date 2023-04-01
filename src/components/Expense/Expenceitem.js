@@ -12,12 +12,10 @@ const Expenseitem=(props)=>{
     console.log("Clicked");
   }
     return (
-        <div className="bgs">
             <div className="Expense-item">
         <Expensedate date={props.date}></Expensedate>
         <ExpenseDetails price={price} title={props.title}></ExpenseDetails>
-        <button className="btn" onClick={clickhandler}>Click title</button>
-        </div>
+        <button className="btn" onClick={clickhandler}>Change Price</button>
         </div>
     );
 }
