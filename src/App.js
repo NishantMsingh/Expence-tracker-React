@@ -3,8 +3,9 @@ import Card from "./components/UIs/Card";
 import Newexpense from "./components/NewExpense/Newexpense";
 
 import "./App.css";
+import { useState } from "react";
 function App() {
-  let expenses = [
+  const [expenses, setExpenses] = useState([
     {
       id: 1,
       date: new Date(),
@@ -33,12 +34,18 @@ function App() {
       price: 2000,
       placeexpendeture: "My style"
     }
-  ];
+  ]);
+  
+
+
+const addexpenseHandler=expensedata=>{
+  setExpenses((prevExpenses) => [expensedata, ...prevExpenses]);
+}
 
   return (
     <div>
     <h1>Expense Tracker</h1>
-    <Newexpense/>
+    <Newexpense onAddExpense={addexpenseHandler}/>
     <Card className="App">
 
 {expenses.map((expense) => (
