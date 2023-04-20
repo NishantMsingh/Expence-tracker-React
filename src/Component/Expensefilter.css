@@ -1,0 +1,14 @@
+.expfilter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        padding:10px 20px;
+}
+select {
+    padding: 5px 30px;
+    border-radius: 5px;
+    
+  }
+  

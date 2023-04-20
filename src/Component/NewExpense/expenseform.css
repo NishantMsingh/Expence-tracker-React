@@ -1,0 +1,35 @@
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    margin: 5px 10px;
+    width: 200px;
+    transition: all .5s ease-in-out;
+
+}
+.input-cantrol{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column ;
+}
+input:focus{
+    background-color: rgb(90, 85, 85);
+    transition: all .5s ease-in-out;
+    outline:none ;
+    color: white;
+}
+.input-cantrol{
+    width: 400px !important;
+    display: inline;
+}
+label{
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 0px 20px;
+}
+.subbtn{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,6 @@
+.card{
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px 4px solid black;
+    background-color: rgb(158, 154, 154);
+    transition: all .5s ease-in-out;
+}

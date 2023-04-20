@@ -1,64 +1,47 @@
-import Expenseitem from "./components/Expense/Expenceitem";
-import Card from "./components/UIs/Card";
-import Newexpense from "./components/NewExpense/Newexpense";
-
 import "./App.css";
+import Expense from "./Expense";
+import NewExpense from "./Component/NewExpense/NewExpense";
 import { useState } from "react";
+const initialExpenses = [
+  {
+    id: "E1",
+    date: new Date(2021, 3, 28),
+    title: "Car Insurance",
+    amount : 200.56,
+  },
+  {
+    id: "E2",
+    date: new Date(2023, 3, 28),
+    title: "Flight Tickets",
+    amount: 6000.56,
+  },
+  {
+    id: "E3",
+    date: new Date(2023, 3, 28),
+    title: "Festival",
+    amount: 1200.56,
+  },
+  {
+    id: "E4",
+    date: new Date(2020, 3, 28),
+    title: "Party Night",
+    amount: 30.56,
+  },
+];
 function App() {
-  const [expenses, setExpenses] = useState([
-    {
-      id: 1,
-      date: new Date(),
-      title: "Car Insurance",
-      price: 1000,
-      placeexpendeture: "Insurance policy",
-    },
-    {
-      id: 2,
-      date: new Date(),
-      title: "Movies",
-      price: 3000,
-      placeexpendeture: "Life style",
-    }, 
-    {
-      id: 3,
-      date: new Date(),
-      title: "Study",
-      price: 3000,
-      placeexpendeture: "Life style"
-    },
-    {
-      id: 23,
-      date: new Date(),
-      title: "Drive",
-      price: 2000,
-      placeexpendeture: "My style"
-    }
-  ]);
-  
+  const [expenses, setExpenses] = useState(initialExpenses);
 
-
-const addexpenseHandler=expensedata=>{
-  setExpenses((prevExpenses) => [expensedata, ...prevExpenses]);
-}
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
 
   return (
-    <div>
-    <h1>Expense Tracker</h1>
-    <Newexpense onAddExpense={addexpenseHandler}/>
-    <Card className="App">
-
-{expenses.map((expense) => (
-        <Expenseitem
-          date={expense.date}
-          title={expense.title}
-          price={expense.price}
-          placeexpendeture={expense.placeexpendeture}
-        />
-      ))}
-      
-     
-    </Card>
+    <div className="d-flex flex-column w-100">
+      <h1 className="display-6">Expense Tracker</h1>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expense items={expenses} />
     </div>
   );
 }
