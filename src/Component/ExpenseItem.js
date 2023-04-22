@@ -12,7 +12,8 @@ const clickHandler=()=>{
 }
 
   return (
-    <div className='expense-item'>
+    <li>
+      <div className='expense-item'>
       <Expensedate date={props.date}></Expensedate>
       <div className='expense-item-discription'>
         <div><h2>{title}</h2></div>
@@ -20,6 +21,7 @@ const clickHandler=()=>{
         <button className='rounded border-0 p-1' onClick={clickHandler}>Change title</button>
       </div>
     </div>
+    </li>
   );
 };
 

@@ -1,6 +1,6 @@
 import CardWrapper from "./Component/CardWrapper";
 import ExpenseFilter from "./Component/ExpenseFilter";
-import ExpenseItem from "./Component/ExpenseItem";
+import ExpenseLists from "./Component/NewExpense/ExpenseLists";
 import React, {useState} from "react";
 function Expense(props) {
   const [selectedYear, setSelectedYear] = useState("ALL");
@@ -9,25 +9,17 @@ function Expense(props) {
     setSelectedYear(event.target.value);
   };
 
-  return (
-    <CardWrapper className="App">
-      <ExpenseFilter onSelectYear={selectYearHandler}/>
-      {props.items.filter((expense) => {
+const expenseFiltered= props.items.filter((expense) => {
   if (selectedYear === "ALL") {
     return true;
   } else {
     return expense.date.getFullYear().toString() === selectedYear;
   }
-}).map((expense) => {
-          return (
-            <ExpenseItem
-              key={expense.id}
-              title={expense.title}
-              date={expense.date}
-              price={expense.amount}
-            />
-          );
-        })}
+})
+  return (
+    <CardWrapper className="App">
+      <ExpenseFilter onSelectYear={selectYearHandler}/>
+      <ExpenseLists items={expenseFiltered}></ExpenseLists>
     </CardWrapper>
   );
 }
