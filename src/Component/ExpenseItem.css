@@ -8,6 +8,9 @@
     border-radius: 7px;
     background-color: #4b4b4b;
 }
+li{
+    list-style-type: none;
+}
 .expense-item-discription{
     display: flex;
     flex-direction: column;
